@@ -1,0 +1,92 @@
+
+@keyframes radial-pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+   
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
+  
+
+  .pulse{
+    animation: radial-pulse 1s infinite;
+  }
+
+.button{
+    
+    width: 100%;
+    display: inline-block;
+    padding:10px 25px;
+    background-color: $green;
+    border:solid $green;
+    font-size: 24px;
+    color:white;
+    border-radius: 4px;
+      cursor: pointer;
+  }
+  
+  .button:hover{
+    color:$green;
+    background-color: white;
+  }
+  
+  .call-button{
+    animation: radial-pulse 1s infinite;
+    z-index: 3;
+    color: white;
+    position: fixed;
+    bottom:30px;
+    left:10px;
+    background-color: $green;
+    border:none;
+    padding: 15px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    &:focus{
+      outline:none;
+    }
+     span{
+       display: none;
+     }
+  }
+  
+  
+  @media screen and (min-width: 460px) {
+
+    .button{
+      width: auto;
+      
+    }
+  }
+
+  
+  @media screen and (min-width: 1300px){
+    
+    .call-button{
+      
+      padding: 20px;
+      font-size: 25px;
+      transform-origin: 0% 50%;
+      left:0;
+      border-radius: 5px;
+      top:50%;
+      bottom:auto;
+      transform: rotate(-90deg) translate(-50% , 50%);
+width: auto;
+height: auto;
+img{
+  display: none;
+}
+      span{
+        display: inline-block;
+      }
+    }
+  }
+
+
+ 
+
+

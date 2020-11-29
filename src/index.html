@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <title>День рождения в Galaxy Arena</title>
+  <link rel="stylesheet" href="css/main.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+</head>
+
+<body>
+
+
+  @@include('./html-templates/header.html',{
+  })
+
+
+  
+  <div class="container">
+    @@include('./html-templates/card-describe.html',{
+      "img":"1",
+  "description":"Мы обеспечиваем комплексный подход по проведению праздников: интересная игра, зона отдыха, по-домашнему теплая атмосфера.",
+    })   
+    <button onclick="popup2('description')" class="button">Заказать</button>
+  </div>
+
+  @@include('./html-templates/small-popup.html',{
+  })
+
+@@include('./html-templates/order-form.html',{
+})
+
+
+
+@@include('./html-templates/footer.html',{
+})
+
+<script src="js/main.js">
+
+   </script>
+</body>
+
+</html>

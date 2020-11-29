@@ -1,0 +1,109 @@
+
+
+.orange-table{
+    .bcg-table{
+        background-color: #ffae0057;
+    }
+   td{
+      font-size: 18px;
+       border-bottom:solid $orange 1px;
+      
+   }
+   th{
+    background-color: $orange;
+}
+}
+
+.violet-table{
+    .bcg-table{
+        background-color: #7200d05b;
+    }
+    th{
+        background-color: $violet;
+    }
+   td{
+
+       border-bottom:solid $violet 1px;
+      
+   }
+}
+.allin-price{ 
+margin-bottom: 40px;
+    border-collapse: collapse;
+    .bcg-table{
+font-weight: 700;
+td{
+    div:nth-child(1){
+        font-size: 19px;
+       line-height: 2;
+}
+    div:nth-child(2){
+        font-size: 14px;
+    
+}
+
+}
+    }
+    th{
+        font-size: 24px;
+        font-weight: 900;
+       
+        line-height: 2;
+    }
+   width: 100%;
+    td{
+        font-size: 16px;
+        width: 100%;
+      padding: 10px 12px;
+    }
+    
+}
+
+@media screen and (min-width: 480px) {
+    .allin-price{ 
+
+        .bcg-table{
+            td{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+    div{
+        width: 49%;
+    }
+        }
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+.grid-price{
+    margin: -10px;
+}
+.grid-item{
+    padding: 10px;
+}
+
+.allin-price{ 
+ 
+        .bcg-table{
+
+    td{
+        div:nth-child(1){
+            font-size: 20px;
+           line-height: 2;
+    }
+        div:nth-child(2){
+            font-size: 18px;
+        
+    }
+    
+    }
+        }
+
+    }
+
+
+}
