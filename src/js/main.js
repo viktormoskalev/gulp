@@ -45,7 +45,7 @@ function ajaxform(evt){
     
   });
 
-  request.open('POST', '/birthdays/mail.php', true);
+  request.open('POST', '/mail.php', true);
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
   request.send('name=' + encodeURIComponent(formData.name) + '&phone=' + encodeURIComponent(formData.phone) + '&desc=' + encodeURIComponent(formData.desc));
 
@@ -58,17 +58,12 @@ for (i=0 ;i<form.length; i++){
   form[i].addEventListener('submit', ajaxform);
 }
 
-function modalopen(){
-  modal.checked="cheked";
-};
-
 
 
 //отправка формы
 
 
-//захват пользователя
-setTimeout(modalopen,40000);
+
 
 //popup2
 

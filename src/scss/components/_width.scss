@@ -1,0 +1,21 @@
+@for $i from 1 through 6 {
+    .width-1-#{$i}{
+        width: 100%/ $i;
+    }
+      }
+
+   @mixin wid($size, $breakpoint) {
+    @media screen and (min-width: $breakpoint){
+        @for $i from 1 through 6 {
+            .width-1-#{$i}#{$size}{
+                width: 100%/ $i;
+            }
+              }
+  
+    }
+    
+  }
+  
+ @include wid(-m ,$breakpoint-m);
+ @include wid(-l ,$breakpoint-l);
+ @include wid(-xl,$breakpoint-xl);

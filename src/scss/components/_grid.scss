@@ -1,7 +1,6 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-  
   }
 
   .grid-l{
@@ -16,50 +15,4 @@
     .grid-item{
       padding: 10px;
     }
-  }
-
-  .grid-border{
-    .grid-item{
-      border:solid 3px $violet;
-    }
-  }
-
-  .grid-item {
-    width: 100%;
-  }
-
-  .width-1-1 {
-    width: 100%;
-  }
-
-  @media (min-width: 600px) {
-
-    .width-1-2-m {
-        width: 50%;
-      }
-  }
-  @media (min-width: 900px) {
-
-    .width-1-2-l {
-        width: 50%;
-      }
-
-      .width-1-3-l{
-        width: 33.33%;
-      }
-  }
-  @media (min-width: 1200px) {
-.space-20-xl{
-  margin: -20px;
-    .grid-item{
-      padding: 10px;
-    }
-}
-    .width-1-4-xl {
-        width: 25%;
-      }  
-    
-    .width-1-3-xl {
-        width: 33.33%;
-      }
   }

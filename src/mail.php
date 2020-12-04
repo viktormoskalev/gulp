@@ -7,7 +7,7 @@ $message .= "Имя: ".$_POST['name']. "\r\n";
 $message .= "Номер телефона: ".$_POST['phone']. "\r\n"; 
 $headers  = 'MIME-Version: 1.0' . "\r\n"; 
   $headers .= 'Content-type: text/html; charset=utf-8'."\r\n"; 
-  if (mail($to,$subject,$message,"from:info@laser-centr.ru")) {
+  if (mail($to,$subject,$message,"from:hi@gm.com")) {
     echo 'good';
     echo $to,$subject,$message ;
   } else {
