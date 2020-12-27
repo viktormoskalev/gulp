@@ -4,7 +4,7 @@
 <head>
   
   <meta charset="UTF-8">
-  <title>День рождения в Galaxy Arena</title>
+  <title>Amazing page</title>
   <link rel="stylesheet" href="css/main.css">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,35 +12,27 @@
 </head>
 
 <body>
-
-
+<div class="wrapper">
   @@include('./html-templates/header.html',{
   })
 
-
-  
-  <div class="container">
-    @@include('./html-templates/card-describe.html',{
-      "img":"1",
-  "description":"Мы обеспечиваем комплексный подход по проведению праздников: интересная игра, зона отдыха, по-домашнему теплая атмосфера.",
-    })   
-    <button onclick="popup2('description')" class="button">Заказать</button>
-  </div>
-
-  @@include('./html-templates/small-popup.html',{
-  })
-
-@@include('./html-templates/order-form.html',{
-})
-
+<div class="container">
+<div class="test" id="test1">1</div>
+<div class="test" id="test2">2</div>
+<div class="test" id="test3">3</div>
+<div class="test" id="test4">4</div>
+<div class="test" id="test5">5</div>
+</div>
 
 
 @@include('./html-templates/footer.html',{
 })
 
-<script src="js/main.js">
+</div>
 
-   </script>
+
+
+<script src="js/main.js"> </script>
 </body>
 
 </html>

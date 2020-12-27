@@ -1,4 +1,7 @@
 $green:#00BC87;
+$logowidth:50px;
+
+
 
 $breakpoint-s:320px;
 $breakpoint-m:480px;
@@ -6,11 +9,26 @@ $breakpoint-l:767px;
 $breakpoint-xl:991px;
 $breakpoint-xxl:1200px;
 
+body{
+  background-color: rgb(199, 199, 199);
+  // for popup noscroll
+}
+
+.wrapper{
+  z-index: 0;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
 html , body{
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -24,6 +42,7 @@ a{
 .container{
   width: 100%;
   height: 100%;
+
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
@@ -63,4 +82,21 @@ figure{
 @media screen and (min-width: $breakpoint-xl){
 
   
+}
+@media screen and (min-width: $breakpoint-xxl){
+
+  
+}
+
+
+
+.test{
+  font-size: 100px;
+  line-height: 500px;
+  text-align: center;
+  min-height: 500px;
+  background-color: rgb(212, 255, 218);
+  &:nth-child(odd){
+    background-color: rgb(128, 128, 128);
+  }
 }
