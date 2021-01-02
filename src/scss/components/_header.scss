@@ -2,7 +2,7 @@
 
 .header{
 background-color: rgb(253, 253, 253);    
-    transition: 1s;
+    transition: 0.3s;
   box-shadow: 1px 1px 50px 1px  rgb(238, 238, 238) inset ;
     &-content{
         padding: 20px 0;
@@ -20,19 +20,14 @@ background-color: rgb(253, 253, 253);
         width: $logowidth;  
     }
 }
-.appear{
+
+.fixed-header{
 position: fixed;
 top:0;
 left:0;
 right: 0;
-animation: headermove  0.3s ease-in-out;
-
 }
 
-@keyframes headermove {
-    0% { transform: translateY(-110%); }
-    100% {transform: translateY(0);}
-   }
 
 @media screen and (min-width: $breakpoint-m){
 

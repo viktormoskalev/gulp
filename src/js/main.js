@@ -1,27 +1,51 @@
 body=document.querySelector("body");
 html=document.querySelector("html");
 header=document.querySelector("header");
+btnMenu=document.querySelector(".btn-menu");
 
 window.onload= function(){
   pagescroll();
+
 }
 
 // мобильное меню
 nav = document.querySelector(".nav");
-document.querySelector(".btn-menu").onclick = toglenav;
-document.querySelector(".nav-menu").onclick = toglenav;
+document.querySelector(".btn-menu").addEventListener("click" , togglenav);
+document.querySelector(".nav-menu").onclick = closenav;
 
-document.querySelector(".nav-background").onclick = toglenav;
-let scrolid = 0 ;
-function toglenav() {
+document.querySelector(".nav-background").onclick = closenav;
+function closenav(){
+  nav.classList.remove("nav-open");
+  btnMenu.style.marginRight="0";
+  showscroll();
+  
+}
+function togglenav() {
   nav.classList.toggle("nav-open");
-  togglescroll();
+if(nav.classList.contains("nav-open")){
+  btnMenu.style.marginRight=window.innerWidth-html.offsetWidth +"px";
+  hidescroll();
+  
+} else {
+  showscroll();
+  btnMenu.style.marginRight="0";
+}
 }
 // мобильное меню
 
 
 // отключить прокрутку
+function hidescroll(){
+  body.style.paddingRight=window.innerWidth-html.offsetWidth +"px";
+  body.style.overflow="hidden";
+}
 
+function showscroll(){
+  body.style.paddingRight=0;
+  body.style.overflow="visible"
+}
+
+let scrolid = 0 ;
 function togglescroll(){
   if (scrolid==0){
     body.style.paddingRight=window.innerWidth-html.offsetWidth +"px";
@@ -64,28 +88,34 @@ for (let i = 0; i < anchors.length; i++) {
 
 
  // Появление меню при прокрутке
+
+
 function pagescroll(){
+  header.classList.add("fixed-header"); //меняем хедер со статика на фиксед только после загрузки страници
+  hplace=document.querySelector(".header-place"); // вместо падинга на боди используем пустой блок
+  let headerheight=header.offsetHeight+"px"; //получаем текущую высоту хедера
+  hplace.style.height=headerheight;  //задаем пустому блоку высоту хедера
+  window.addEventListener('resize', function(event){
+    if(headerheight!==header.offsetHeight+"px"){
+   //меняем высоту пустого блока только если изменилась высота хедера
+      headerheight=header.offsetHeight+"px";
+      hplace.style.height=headerheight;
+    }
+  });
+
   let pscroll = 0;
-  let timeout;
   window.addEventListener('scroll', function() {
- clearTimeout(timeout);
-   function debounce(){ 
-       if (pscroll<pageYOffset||pscroll<header.offsetHeight){
-         body.style.paddingTop=0;
-         header.classList.remove("appear");
+       if (pscroll<pageYOffset){
+               header.style.transform="translateY(-100%)"; //прячем хедер при прокрутке вниз    
+              //  header.style.top="-100%"; //прячем хедер при прокрутке вниз    
        }else {
          if(pageYOffset>header.offsetHeight){
-           header.classList.add("appear");
-           body.style.paddingTop=header.offsetHeight+"px";
+           header.style.transform="none"; //показываем хедер при прокрутке вверх  
          }
        }  
    pscroll=pageYOffset;
-   }
-   timeout= setTimeout(debounce,100);
  });
 }
-
-
 
  //Появление меню при прокрутке
 

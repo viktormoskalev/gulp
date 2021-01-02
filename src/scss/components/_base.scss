@@ -1,8 +1,5 @@
 $green:#00BC87;
 $logowidth:50px;
-
-
-
 $breakpoint-s:320px;
 $breakpoint-m:480px;
 $breakpoint-l:767px;
@@ -91,6 +88,18 @@ figure{
 
 
 .test{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  span{
+    width: 100%;
+    background-color: rgb(150, 118, 118);
+    border:solid red 1px;
+    line-height: 1;
+    font-size: 10px;
+    display: block;
+  }
   font-size: 100px;
   line-height: 500px;
   text-align: center;
