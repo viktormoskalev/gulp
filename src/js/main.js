@@ -105,13 +105,15 @@ function pagescroll(){
 
   let pscroll = 0;
   window.addEventListener('scroll', function() {
-       if (pscroll<pageYOffset){
+   
+   
+      if (pscroll<pageYOffset&pageYOffset>header.offsetHeight){
                header.style.transform="translateY(-100%)"; //прячем хедер при прокрутке вниз    
-              //  header.style.top="-100%"; //прячем хедер при прокрутке вниз    
+              
        }else {
-         if(pageYOffset>header.offsetHeight){
+    
            header.style.transform="none"; //показываем хедер при прокрутке вверх  
-         }
+         
        }  
    pscroll=pageYOffset;
  });
