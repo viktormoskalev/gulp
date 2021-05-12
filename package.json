@@ -25,7 +25,7 @@
     "insales-uploader-autoprefixer": "^1.0.1",
     "node-sass": "^4.14.1",
     "rimraf": "^2.6.3",
-    "swiper": "^5.4.1"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "gulp-file-include": "^2.2.2",
